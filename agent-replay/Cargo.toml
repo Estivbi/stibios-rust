@@ -1,0 +1,7 @@
+[package]
+name = "agent-replay"
+version = "0.1.0"
+edition = "2021"
+description = "Reproductor de sesiones de agentes en el terminal (hito 1: lecciones 1-5 del curso)"
+
+[dependencies]

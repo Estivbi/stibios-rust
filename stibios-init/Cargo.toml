@@ -1,0 +1,7 @@
+[package]
+name = "stibios-init"
+version = "0.1.0"
+edition = "2021"
+description = "Generador de proyectos con la forma de trabajar de Stibios (hito 1: lecciones 1-5 del curso)"
+
+[dependencies]
