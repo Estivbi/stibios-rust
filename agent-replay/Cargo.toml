@@ -1,7 +1,19 @@
 [package]
 name = "agent-replay"
-version = "0.1.0"
-edition = "2021"
-description = "Reproductor de sesiones de agentes en el terminal (hito 1: lecciones 1-5 del curso)"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Reproductor interactivo de sesiones de agentes de IA en terminal (TUI + CLI) - Curso aprenderust.dev Hitos 1-7"
+repository.workspace = true
 
 [dependencies]
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+crossterm = { workspace = true }
+ratatui = { workspace = true }
+
+[[bin]]
+name = "agent-replay"
+path = "src/main.rs"

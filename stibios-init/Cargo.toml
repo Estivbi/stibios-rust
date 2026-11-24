@@ -1,7 +1,15 @@
 [package]
 name = "stibios-init"
-version = "0.1.0"
-edition = "2021"
-description = "Generador de proyectos con la forma de trabajar de Stibios (hito 1: lecciones 1-5 del curso)"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "CLI scaffolding para proyectos con metodología SDD/TDD y agentes - Curso aprenderust.dev Hitos 1-7"
+repository.workspace = true
 
 [dependencies]
+clap = { workspace = true }
+
+[[bin]]
+name = "stibios-init"
+path = "src/main.rs"
