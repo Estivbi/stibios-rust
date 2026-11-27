@@ -27,7 +27,19 @@ Dos herramientas de línea de comandos en **Rust** construidas de principio a fi
 
 ## ⚡ Instalación y Ejecución Rápida
 
-Requiere tener instalado Rust (1.80+):
+### Opción 1: Instalar directamente con Cargo (en cualquier máquina con Rust)
+
+```bash
+# Instalar los binarios directamente desde GitHub:
+cargo install --git https://github.com/Estivbi/stibios-rust agent-replay
+cargo install --git https://github.com/Estivbi/stibios-rust stibios-init
+
+# Ejecutar en tu terminal:
+agent-replay
+stibios-init --help
+```
+
+### Opción 2: Clonar y compilar localmente
 
 ```bash
 # Clonar el repositorio
