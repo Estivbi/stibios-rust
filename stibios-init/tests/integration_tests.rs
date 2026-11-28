@@ -43,9 +43,12 @@ fn test_validacion_nombres_incorrectos() {
 fn test_plantillas_elementos() {
     let p_sdd = obtener_plantilla(Metodologia::Sdd);
     let elems_sdd = p_sdd.generar_elementos("test-sdd");
+    assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "stibios.config.yml"));
+    assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "AGENTS.md"));
     assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "CLAUDE.md"));
     assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "DESIGN.md"));
-    assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "specs"));
+    assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "docs/specs"));
+    assert!(elems_sdd.iter().any(|e| e.ruta_relativa == "docs/backlog"));
 
     let p_tdd = obtener_plantilla(Metodologia::Tdd);
     let elems_tdd = p_tdd.generar_elementos("test-tdd");

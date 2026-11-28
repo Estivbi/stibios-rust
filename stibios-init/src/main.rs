@@ -149,8 +149,11 @@ fn comprobar_directorio(dir: &Path) {
     println!("\n\x1b[1;36mComprobando conformidad Stibios en: {}\x1b[0m", dir.display());
 
     let requeridos = [
+        ("stibios.config.yml", "Configuración central del kit"),
+        ("AGENTS.md", "Contrato del equipo de agentes"),
         ("CLAUDE.md", "Contexto de agentes de IA"),
-        ("specs", "Carpeta de especificaciones SDD"),
+        ("docs/specs", "Carpeta de especificaciones SDD"),
+        ("docs/backlog", "Carpeta de backlog local de tickets"),
         ("tests", "Suite de pruebas TDD"),
         (".gitignore", "Configuración de exclusión git"),
     ];
@@ -159,10 +162,10 @@ fn comprobar_directorio(dir: &Path) {
     for (elem, desc) in requeridos {
         let ruta = dir.join(elem);
         if ruta.exists() {
-            println!("  \x1b[32m✔ Presente:\x1b[0m  {:<12} ({desc})", elem);
+            println!("  \x1b[32m✔ Presente:\x1b[0m  {:<18} ({desc})", elem);
             conformes += 1;
         } else {
-            println!("  \x1b[33m⚠ Ausente:\x1b[0m   {:<12} ({desc})", elem);
+            println!("  \x1b[33m⚠ Ausente:\x1b[0m   {:<18} ({desc})", elem);
         }
     }
 
